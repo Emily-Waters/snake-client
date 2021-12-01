@@ -2,13 +2,15 @@ const net = require("net");
 
 // establishes a connection with the game server
 const connect = function() {
+  console.log("Connecting ...");
   const conn = net.createConnection({
     host: 'localhost', // IP address here,
     port: 50541// PORT number here,
   });
 
   conn.on('connect', () => {
-    console.log("Connecting ...");
+    conn.write('Name: RKD');
+    console.log("Connection Success!");
   });
 
   // interpret incoming data as text
