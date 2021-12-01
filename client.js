@@ -10,6 +10,7 @@ const connect = function() {
 
   conn.on('connect', () => {
     conn.write('Name: RKD');
+    // conn.write('Move: up');
     console.log("Connection Success!");
   });
 
